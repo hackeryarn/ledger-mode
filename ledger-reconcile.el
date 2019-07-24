@@ -453,7 +453,7 @@ Return a count of the uncleared transactions."
          (xacts
           (with-temp-buffer
             (ledger-exec-ledger buf (current-buffer)
-                                "--uncleared" "--real" "emacs" "--sort" sort-by account)
+                                "--U" "--real" "emacs" "--sort" sort-by account)
             (goto-char (point-min))
             (unless (eobp)
               (if (looking-at "(")
